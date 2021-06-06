@@ -1,0 +1,20 @@
+<div class="flex">
+  
+<mat-card class="example-card">
+    <mat-card-header class="title-card"> 
+      <mat-card-title >Device Details with id:{{device?.id}}</mat-card-title>
+      <mat-card-subtitle > Name:{{device?.nameDevice}} We can compare mainframes to all other types of computers.
+        {{device?.deviceType}} We can compare mainframes to all other types of computers{{device?.nameDevice}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+       {{device?.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)=" list()">Go Back</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

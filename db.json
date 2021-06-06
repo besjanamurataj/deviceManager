@@ -1,0 +1,58 @@
+{
+  "devices": [
+    {
+      "nameDevice": "fb",
+      "deviceType": "Mobile Phone",
+      "operatingSystem": "KNVd;s'l",
+      "description": "ld vjs'losjv",
+      "id": 1,
+      "data": "67.65,0000"
+    },
+    {
+      "nameDevice": "fb",
+      "deviceType": "Laptop",
+      "operatingSystem": "KNVd;s'l",
+      "description": "ld vjs'losjv",
+      "id": 2,
+      "data": "67.65,0000"
+    },
+    {
+      "nameDevice": "fb",
+      "deviceType": "Router",
+      "operatingSystem": "KNVd;s'l",
+      "description": "ld vjs'losjv",
+      "id": 3,
+      "data": "67.65,0000"
+    },
+    {
+      "nameDevice": "rrere",
+      "deviceType": "2",
+      "operatingSystem": "36bite ",
+      "description": "hjfafiluafaefuo",
+      "id": 4,
+      "data": "67.65,0000"
+    },
+    {
+      "nameDevice": "Computer",
+      "deviceType": "2",
+      "operatingSystem": "113",
+      "description": "12345",
+      "id": 5,
+      "data": "67.65,0000"
+    },
+    {
+      "nameDevice": "Computer",
+      "deviceType": "2",
+      "operatingSystem": "nn",
+      "description": "mmm",
+      "id": 7
+    },
+    {
+      "nameDevice": "ff",
+      "deviceType": "2",
+      "operatingSystem": "KNVd;s'lmm",
+      "description": "ddddddddddddddddddddddddddd",
+      "id": 8
+    }
+  ]
+}

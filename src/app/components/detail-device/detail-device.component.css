@@ -1,0 +1,20 @@
+.flex {
+  align-items: center;
+  margin: 30px;
+  padding-left: 30px;
+   
+ 
+}
+.title-card{
+  color:black;
+  padding: 20px;
+  
+ 
+}
+
+.subtitle-card{
+  color: black;
+}
+.example-card {
+  max-width: 400px;
+}
