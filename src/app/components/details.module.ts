@@ -1,9 +1,9 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { MatTableModule } from '@angular/material/table';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { DetailsRoutingModule } from './details-routing.module';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { AddEditDeviceComponent } from './add-edit-device/add-edit-device.component';
@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -27,6 +28,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatIconModule,
     MatTableModule,
     MatButtonModule,
+
     MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
@@ -35,6 +37,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule,
     MatNativeDateModule,
     MatCardModule,
-  ]
+
+  ],
+  providers: [DatePipe],
 })
 export class DetailsModule { }

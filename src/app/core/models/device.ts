@@ -1,16 +1,11 @@
 export interface Device{
     id:number;
     nameDevice:string;
-    deviceType:DeviceType;
+    deviceType:string;
     operatingSystem:string;
     data:Date;
     description:string;
-  
+    customInput:string;
+
 }
 
-
-
-export interface DeviceType{
-     id:string;
-     name:string;
-}

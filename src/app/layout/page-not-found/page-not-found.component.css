@@ -1,0 +1,17 @@
+.center {
+  position: absolute;
+  left: 47%;
+  top: 40%;
+  transform: translate(-50%, -1%);
+
+}
+h1{
+    color:#3f51b5;
+}
+a{
+  font-size: 23px;
+  margin-left: 49px;
+  color:#3f51b5;
+
+
+}

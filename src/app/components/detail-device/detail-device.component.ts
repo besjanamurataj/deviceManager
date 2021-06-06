@@ -6,27 +6,32 @@ import { Device } from 'src/app/core/models/device';
 @Component({
   selector: 'app-detail-device',
   templateUrl: './detail-device.component.html',
-  styleUrls: ['./detail-device.component.css']
+  styleUrls: ['./detail-device.component.css'],
 })
 export class DetailDeviceComponent implements OnInit {
   id!: number;
   device!: Device;
-  constructor(private route:ActivatedRoute, private deviceService:DeviceService, private router:Router) { }
+  constructor(
+    private route: ActivatedRoute,
+    private deviceService: DeviceService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    if(this.id){
-     this.getDeviceById(this.id);
+    if (this.id) {
+      this.getDeviceById(this.id);
     }
   }
- getDeviceById(id:number){
-    this.deviceService.getElementById(id).subscribe(data =>{
-      this.device =data;
-      console.log(data);
-    })
- }
+  getDeviceById(id: number) {
+    this.deviceService.getElementById(id).subscribe((data) => {
+      this.device = data;
+    },(error) =>{
+      console.error(error)
+    });
+  }
 
- list(){
-  this.router.navigate(['home']);
-}
+  list() {
+    this.router.navigate(['home']);
+  }
 }

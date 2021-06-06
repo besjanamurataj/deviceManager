@@ -1,58 +1,49 @@
 {
   "devices": [
     {
-      "nameDevice": "fb",
-      "deviceType": "Mobile Phone",
-      "operatingSystem": "KNVd;s'l",
-      "description": "ld vjs'losjv",
-      "id": 1,
-      "data": "67.65,0000"
-    },
-    {
-      "nameDevice": "fb",
+      "nameDevice": "Computer ",
       "deviceType": "Laptop",
-      "operatingSystem": "KNVd;s'l",
-      "description": "ld vjs'losjv",
+      "operatingSystem": "Linux",
+      "description": "Windows 10 laptops give you everything you love and more. Browse our new laptops to find deals on laptop computers that deliver speed, power, familiarity, and the latest processors and features. Compare up to 3 Windows devices by selecting the compare checkbox below each device.",
+      "id": 1,
+      "data": "2021-06-24T22:00:00.000Z",
+      "customInput": "RAM"
+    },
+    {
+      "nameDevice": "Computer",
+      "deviceType": "Laptop",
+      "operatingSystem": "VMS",
+      "description": "Windows 10 laptops give you everything you love and more. Browse our new laptops to find deals on laptop computers that deliver speed, power, familiarity, and the latest processors and features. Compare up to 3 Windows devices by selecting the compare checkbox below each device.",
       "id": 2,
-      "data": "67.65,0000"
+      "data": "2021-06-24T22:00:00.000Z",
+      "customInput": "RAM"
     },
     {
-      "nameDevice": "fb",
-      "deviceType": "Router",
-      "operatingSystem": "KNVd;s'l",
-      "description": "ld vjs'losjv",
+      "nameDevice": "Computer",
+      "deviceType": "Laptop",
+      "operatingSystem": "Windows",
+      "description": "Windows 10 laptops give you everything you love and more. Browse our new laptops to find deals on laptop computers that deliver speed, power, familiarity, and the latest processors and features. Compare up to 3 Windows devices by selecting the compare checkbox below each device.",
       "id": 3,
-      "data": "67.65,0000"
+      "data": "2021-06-24T22:00:00.000Z",
+      "customInput": "RAM"
     },
     {
-      "nameDevice": "rrere",
-      "deviceType": "2",
-      "operatingSystem": "36bite ",
-      "description": "hjfafiluafaefuo",
+      "nameDevice": "Phone",
+      "deviceType": "Mobile Phone",
+      "operatingSystem": "Android",
+      "description": "The Apple iOS is not allowed to be used in third party systems, so you will only be able to use it on products made by Apple. It comes with the Safari web browser for internet use, an iPod application for playing music and Apple's Mail for managing your emails.",
       "id": 4,
-      "data": "67.65,0000"
+      "data": "2021-06-24T22:00:00.000Z",
+      "customInput": " Camera resolution"
     },
     {
       "nameDevice": "Computer",
-      "deviceType": "2",
-      "operatingSystem": "113",
-      "description": "12345",
+      "deviceType": "Laptop",
+      "operatingSystem": "Linux",
+      "description": "Windows 10 laptops give you everything you love and more. Browse our new laptops to find deals on laptop computers that deliver speed, power, ",
       "id": 5,
-      "data": "67.65,0000"
-    },
-    {
-      "nameDevice": "Computer",
-      "deviceType": "2",
-      "operatingSystem": "nn",
-      "description": "mmm",
-      "id": 7
-    },
-    {
-      "nameDevice": "ff",
-      "deviceType": "2",
-      "operatingSystem": "KNVd;s'lmm",
-      "description": "ddddddddddddddddddddddddddd",
-      "id": 8
+      "data": "2021-06-24T22:00:00.000Z",
+      "customInput": "RAM"
     }
   ]
 }

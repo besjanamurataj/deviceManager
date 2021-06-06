@@ -1,5 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component,OnInit } from '@angular/core';
+import { MatDialog} from '@angular/material/dialog';
 import { Device } from 'src/app/core/models/device';
 import { DeviceService } from 'src/app/core/service/device.service';
 import { AddEditDeviceComponent } from '../add-edit-device/add-edit-device.component';
@@ -18,10 +18,7 @@ export class HomePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.deviceService.getAll().subscribe((data) => {
-      this.dataSource = data;
-      console.log(this.dataSource);
-    });
+    this.getDeviceAll();
   }
   displayedColumns: string[] = [
     'id',
@@ -38,15 +35,7 @@ export class HomePageComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.deviceService.delete(device.id).subscribe((data) => {
-          this.deviceService.getAll().subscribe((data) => {
-            this.dataSource = data;
-          });
-          // const index = this.dataSource.indexOf(device);
-          // console.log(index)
-          // this.dataSource.splice(index,1);
-          // console.log(  this.dataSource.splice(index,1));
-
-          //   console.log(this.dataSource);
+          this.getDeviceAll();
         });
       }
     });
@@ -56,16 +45,21 @@ export class HomePageComponent implements OnInit {
     console.log(device);
 
     const dialogRef = this.dialogService.open(AddEditDeviceComponent, {
-      data: {...device} || {},
+      data: { ...device } || {},
     });
     console.log(dialogRef);
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        if (result.event == 'Add') {
-          console.log('add');
-        } else (result.event == 'Update');
-        console.log('update');
+        this.getDeviceAll();
       }
+    });
+  }
+  getDeviceAll() {
+    this.deviceService.getAll().subscribe((data) => {
+      this.dataSource = data;
+      console.log(this.dataSource);
+    },(error) =>{
+      console.error(error);
     });
   }
 }

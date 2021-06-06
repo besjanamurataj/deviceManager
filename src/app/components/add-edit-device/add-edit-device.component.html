@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Edit Person</h1>
+<h1 mat-dialog-title>{{ data?.id ? "Update device" : "Add new device" }}</h1>
 
 <form class="example-form" #formControl="ngForm">
   <mat-form-field class="example-full-width">
@@ -7,68 +7,89 @@
     >
     <input
       matInput
-      placeholder="Ex. Pizza"
-      value="Sushi"
+      placeholder="Ex. Device name"
+      value="Computer"
       [(ngModel)]="data.nameDevice"
       name="nameDevice"
       required
-    /> 
+    />
   </mat-form-field>
 
-  <mat-form-field appearance="fill" class="example-full-width">
-    <!-- <mat-label>Select an option</mat-label> -->
-  
-    <mat-select  [(ngModel)]="data.deviceType" name="device">
-      <mat-option *ngFor="let device of deviceOption" [value]="device.id">
-       {{device.name}}
+  <mat-form-field class="example-full-width">
+    <mat-label>Select an option</mat-label>
+
+    <mat-select
+      [(ngModel)]="data.deviceType"
+      name="deviceType"
+      #mySelect
+      (selectionChange)="changeSelect(mySelect.value)"
+    >
+      <mat-option *ngFor="let device of deviceOption" [value]="device.name">
+        {{ device.name }}
       </mat-option>
     </mat-select>
   </mat-form-field>
-
-
-
   <mat-form-field class="example-full-width">
     <mat-label>Operation System</mat-label>
     <input
       matInput
-      placeholder="Ex. Pizza"
-      value="Sushi"
+      placeholder="Ex.Androit "
+      value="Androit"
       [(ngModel)]="data.operatingSystem"
       name="operatingSystem"
       required
     />
   </mat-form-field>
-
-
-
+  <mat-form-field class="example-full-width">
+    <mat-label>Custom Input </mat-label>
+    <input
+      matInput
+      placeholder="Ex.Custom  "
+      [(ngModel)]="data.customInput"
+      name="customInput"
+      required
+    />
+  </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Description</mat-label>
     <textarea
       matInput
-      placeholder="Ex. It makes me feel..."
+      placeholder="Ex. It makes ..."
       [(ngModel)]="data.description"
+      maxlength="400"
+      cdkAutosizeMinRows="5"
+      cdkAutosizeMaxRows="6"
       name="description"
+      #description
     ></textarea>
+    <mat-hint align="end">{{description.value.length}} / 400</mat-hint>
   </mat-form-field>
 
-
-  <mat-form-field class="example-full-width" appearance="fill">
+  <mat-form-field class="example-full-width">
     <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker" name="data" [(ngModel)]="data">
-    <mat-datepicker-toggle matSuffix [for]="picker">
-      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-    </mat-datepicker-toggle>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      name="data"
+      [(ngModel)]="data.data"
+      required
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
-
-
-
-
   <div class="mt-5" mat-dialog-actions>
-    <button mat-raised-button color="primary" (click)="save()">Submit</button>
     <button mat-raised-button mat-dialog-close (click)="onNoClick()">
       Cancel
     </button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="formControl?.invalid"
+      (click)="save()"
+    >
+      Submit
+    </button>
+
   </div>
 </form>
